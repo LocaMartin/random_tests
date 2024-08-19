@@ -33,7 +33,7 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run nmap
         run: |
-          sudo nmap -Pn -sV -O 10.2.243.54
+          sudo nmap -Pn -sV  -p- -O 10.2.243.54
           echo "10.2.243.54 Done..."
-          sudo nmap -Pn -sV -O 192.168.102.1
+          sudo nmap -Pn -sV -p- -O 192.168.102.1
           echo "192.168.102.1 Done..."
