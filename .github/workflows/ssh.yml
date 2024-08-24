@@ -1,0 +1,13 @@
+jobs:
+  my-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up SSH key
+        uses: appleboy/ssh-action@master
+        with:
+          key: ${{ secrets.GITHUB_TOKEN }}
+          known_hosts: |
+            github.com ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC+...
