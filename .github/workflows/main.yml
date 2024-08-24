@@ -31,6 +31,9 @@ jobs:
           sudo apt upgrade -y
           sudo apt install nmap
       # Runs a single command using the runners shell
+      - name: IP
+        run: ifconfig
+        
       - name: Run nmap
         run: |
           sudo nmap -Pn -sV -O 0.0.0.0
